@@ -9,12 +9,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class SportsController {
-    public void Back(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
+public class ActivityCenterController {
+    @FXML
+    public void ToTipCalculator(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("tip-calculator.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Activity Center");
+        stage.setTitle("Tip Calculator");
         stage.setScene(scene);
         stage.show();
     }
