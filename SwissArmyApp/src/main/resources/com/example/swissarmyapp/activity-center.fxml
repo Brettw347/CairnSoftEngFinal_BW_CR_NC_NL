@@ -5,9 +5,14 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.ActivityCenterController">
    <children>
-      <VBox layoutX="250.0" layoutY="100.0" prefHeight="200.0" prefWidth="100.0">
+      <VBox layoutX="200.0" layoutY="42.0" prefHeight="257.0" prefWidth="200.0">
          <children>
             <Button mnemonicParsing="false" onAction="#ToTipCalculator" text="Tip Calculator" />
+            <Button mnemonicParsing="false" onAction="#ToMadlibs" text="Madlibs" />
+            <Button mnemonicParsing="false" onAction="#ToSports" text="Sports" />
+            <Button mnemonicParsing="false" onAction="#ToVerseOfTheDay" text="Verse of the Day" />
+            <Button mnemonicParsing="false" onAction="#ToTrivia" text="Trivia" />
+            <Button mnemonicParsing="false" onAction="#ToSettings" text="Settings" />
          </children>
       </VBox>
    </children>
