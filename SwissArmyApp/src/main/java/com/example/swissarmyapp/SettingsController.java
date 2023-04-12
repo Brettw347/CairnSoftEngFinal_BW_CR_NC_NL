@@ -18,4 +18,10 @@ public class SettingsController {
         stage.setScene(scene);
         stage.show();
     }
+    public void DarkMode(){
+
+    }
+    public void ChangedFontSize(){
+        
+    }
 }
