@@ -2,13 +2,41 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.SettingsController">
    <children>
-      <VBox layoutX="250.0" layoutY="100.0" prefHeight="200.0" prefWidth="100.0">
+      <HBox layoutX="-1.0" layoutY="1.0" prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#Back" text="Back" />
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Back" prefHeight="53.0" prefWidth="112.0" text="Back" />
+               </children>
+            </VBox>
+            <VBox prefHeight="400.0" prefWidth="123.0" />
+            <VBox prefHeight="400.0" prefWidth="157.0">
+               <children>
+                  <CheckBox mnemonicParsing="false" prefHeight="66.0" prefWidth="157.0" text="Dark Mode" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Font Size" wrappingWidth="148.13671875" />
+                  <ScrollBar />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="29.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Font" wrappingWidth="54.13671875" />
+                        <ChoiceBox prefHeight="25.0" prefWidth="77.0" />
+                     </children>
+                  </HBox>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Change Username" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField />
+                        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Change" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
          </children>
-      </VBox>
+      </HBox>
    </children>
 </AnchorPane>
