@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.TriviaController">
    <children>
-      <Button layoutX="48.0" layoutY="33.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="61.0" text="Return to Activities Page" textAlignment="CENTER" wrapText="true">
+      <Button layoutX="37.0" layoutY="25.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="61.0" text="Return to Activities Page" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="10.0" />
          </font></Button>
