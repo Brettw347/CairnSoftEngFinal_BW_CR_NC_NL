@@ -14,27 +14,27 @@
          <font>
             <Font name="System Bold" size="36.0" />
          </font></Label>
-      <Label layoutX="133.0" layoutY="91.0" prefHeight="54.0" prefWidth="334.0" text="Question 1: When did the construction of the Great Wall of China begin?" textAlignment="CENTER" wrapText="true">
+      <Label layoutX="133.0" layoutY="91.0" prefHeight="54.0" prefWidth="334.0" text="Question 1: Who was the first president to live in the White House?" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="233.0" layoutY="176.0" mnemonicParsing="false" text="a) 7th century BC">
+      <Button layoutX="233.0" layoutY="176.0" mnemonicParsing="false" text="A) John Adams">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="232.0" layoutY="220.0" mnemonicParsing="false" text="b) 5th century BC">
+      <Button layoutX="232.0" layoutY="220.0" mnemonicParsing="false" text="B) George Washington">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="233.0" layoutY="263.0" mnemonicParsing="false" text="c) 3rd century BC">
+      <Button layoutX="233.0" layoutY="263.0" mnemonicParsing="false" text="C) Thomas Jefferson">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="233.0" layoutY="305.0" mnemonicParsing="false" text="d) 1st century BC">
+      <Button layoutX="233.0" layoutY="305.0" mnemonicParsing="false" text="D) James Madison">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
