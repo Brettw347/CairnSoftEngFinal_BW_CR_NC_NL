@@ -6,14 +6,38 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.TriviaController">
    <children>
-      <VBox layoutX="142.0" layoutY="100.0" prefHeight="200.0" prefWidth="285.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#Back" text="button" />
-         </children>
-      </VBox>
-      <Button layoutX="66.0" layoutY="40.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="61.0" text="Return to Activities Page" textAlignment="CENTER" wrapText="true">
+      <Button layoutX="48.0" layoutY="33.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="61.0" text="Return to Activities Page" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="10.0" />
          </font></Button>
+      <Label layoutX="199.0" layoutY="14.0" text="Trivia Game">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font></Label>
+      <Label layoutX="133.0" layoutY="91.0" prefHeight="54.0" prefWidth="334.0" text="Question 1: When did the construction of the Great Wall of China begin?" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="233.0" layoutY="176.0" mnemonicParsing="false" text="a) 7th century BC">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="232.0" layoutY="220.0" mnemonicParsing="false" text="b) 5th century BC">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="233.0" layoutY="263.0" mnemonicParsing="false" text="c) 3rd century BC">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="233.0" layoutY="305.0" mnemonicParsing="false" text="d) 1st century BC">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
