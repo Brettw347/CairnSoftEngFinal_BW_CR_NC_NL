@@ -17,7 +17,6 @@ import java.io.IOException;
 import static java.lang.Double.parseDouble;
 
 public class TipCalculatorController {
-    //ObservableList<String> percentages = FXCollections.observableArrayList("10", "15", "20", "25");
     @FXML
     private ChoiceBox percentChoice;
     ObservableList<Integer> percentages = FXCollections.observableArrayList(10, 15, 20, 25);
@@ -28,18 +27,16 @@ public class TipCalculatorController {
     @FXML
     private TextField total;
 
-
-
     @FXML
     private void initialize() {
         percentChoice.setItems(percentages);
     }
 
     @FXML
-    protected double onCalculateButtonClick(){
-        double value = (double) percentChoice.getValue();
-        double tip = (value * .01) * parseDouble(total.getText());
-        return tip;
+    protected void onCalculateButtonClick(){
+        double percent = (double) percentChoice.getValue();
+        double tip = (percent * .01) * parseDouble(total.getText());
+        tipTotal.setText("$" + tip);
     }
 
     @FXML
