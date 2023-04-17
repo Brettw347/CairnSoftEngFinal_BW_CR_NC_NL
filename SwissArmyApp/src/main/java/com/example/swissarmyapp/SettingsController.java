@@ -16,7 +16,7 @@ import java.io.IOException;
 public class SettingsController {
     @FXML
     private ChoiceBox fontChoice;
-    ObservableList<String> fontNames = FXCollections.observableArrayList("Times New Roman", "Ariel", "Comic Sans");
+    ObservableList<String> fontNames = FXCollections.observableArrayList("Times New Roman", "Arial", "Comic Sans");
     @FXML
     private void initialize() {
         fontChoice.setItems(fontNames);
