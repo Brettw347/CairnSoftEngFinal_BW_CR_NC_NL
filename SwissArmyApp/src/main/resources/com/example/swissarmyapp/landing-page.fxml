@@ -3,12 +3,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.LandingPageController">
    <children>
-      <Button layoutX="209.0" layoutY="323.0" mnemonicParsing="false" onAction="#ToChooseActvityPage" prefHeight="25.0" prefWidth="182.0" text="Go!" />
-      <TextField layoutX="209.0" layoutY="284.0" prefHeight="25.0" prefWidth="182.0" text="Please Input Your Username!" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="219.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="159.0" layoutY="341.0" mnemonicParsing="false" onAction="#ToChooseActvityPage" prefHeight="25.0" prefWidth="182.0" text="Go!" textFill="RED">
+         <font>
+            <Font name="Copperplate Gothic Light" size="43.0" />
+         </font></Button>
+      <TextField layoutX="159.0" layoutY="298.0" prefHeight="25.0" prefWidth="182.0" text="Please Input Your Username!" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="169.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
                <Image url="@../../../HighlanderLogo.png" />
          </image>

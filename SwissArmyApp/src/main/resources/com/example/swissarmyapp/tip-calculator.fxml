@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.TipCalculatorController">
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.TipCalculatorController">
    <children>
       <Button layoutX="24.0" layoutY="19.0" mnemonicParsing="false" onAction="#Back" prefHeight="54.0" prefWidth="70.0" text="Return to Activites Page" textAlignment="CENTER" wrapText="true">
          <font>
