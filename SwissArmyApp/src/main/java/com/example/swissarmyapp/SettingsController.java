@@ -23,6 +23,6 @@ public class SettingsController {
 
     }
     public void ChangedFontSize(){
-        
+
     }
 }
