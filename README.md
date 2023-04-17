@@ -26,29 +26,29 @@ This program is designed to run on a tablet running Windows 11 version 22H2.
 - 'As a bored client, I want to read something humorous so that I can be entertained while I wait for my meeting.'
 
 ## UML Diagrams
-![UML Diagram](https://github.com/Brettw347/CairnSoftEng_BW_CR_NC_NL/blob/main/UML%20java%20class%20diagram.jpg)
+![UML Diagram](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UML%20java%20class%20diagram.jpg)
 
 ## UI Mockup
 ### Landing Page
-![Landing Page](https://github.com/Brettw347/CairnSoftEng_BW_CR_NC_NL/blob/main/UI%20Mockups/Landing%20Page.png)
+![Landing Page](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Landing%20Page.png)
 
 ### Choose Acitivty Page
-![Choose Activity](https://github.com/Brettw347/CairnSoftEng_BW_CR_NC_NL/blob/main/UI%20Mockups/Choose%20Activity.png)
+![Choose Activity](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Choose%20Activity.png)
 
 ### Tip Calculator
-![Tip Calculator](https://github.com/Brettw347/CairnSoftEng_BW_CR_NC_NL/blob/main/UI%20Mockups/Tip%20Calculator.png)
+![Tip Calculator](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Tip%20Calculator.png)
 
 ### Madlibs
-![Madlibs](https://github.com/Brettw347/CairnSoftEng_BW_CR_NC_NL/blob/main/UI%20Mockups/Madlibs.png)
+![Madlibs](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Madlibs.png)
 
 ### Sports 
-![Sports](https://github.com/Brettw347/CairnSoftEng_BW_CR_NC_NL/blob/main/UI%20Mockups/Sports.png)
+![Sports](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Sports.png)
 
 ### Verse of the Day
-![VofD](https://github.com/Brettw347/CairnSoftEng_BW_CR_NC_NL/blob/main/UI%20Mockups/Verse%20of%20the%20Day.png)
+![VofD](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Verse%20of%20the%20Day.png)
 
 ### Trivia Game
-![Trivia](https://github.com/Brettw347/CairnSoftEng_BW_CR_NC_NL/blob/main/UI%20Mockups/Trivia.png)
+![Trivia](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Trivia.png)
 
 ### Settings
-![Settings](https://github.com/Brettw347/CairnSoftEng_BW_CR_NC_NL/blob/main/UI%20Mockups/Settings.png)
+![Settings](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Settings.png)
