@@ -16,6 +16,7 @@ public class LandingPageController {
     public void ToChooseActvityPage(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+        scene.getStylesheets().add(HelloApplication.class.getResource(SystemData.currentStyle()).toExternalForm());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Activity Center");
         stage.setScene(scene);
