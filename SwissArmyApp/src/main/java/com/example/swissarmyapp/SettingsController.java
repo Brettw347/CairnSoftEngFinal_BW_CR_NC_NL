@@ -20,9 +20,9 @@ public class SettingsController {
         stage.show();
     }
     public void DarkMode(){
-
+        SystemData systemdata = new SystemData();
+        systemdata.darkMode = true;
     }
     public void ChangedFontSize(){
-
     }
 }

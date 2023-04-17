@@ -2,7 +2,12 @@ package com.example.swissarmyapp;
 
 public class SystemData{
     public static String currentStyle() {
-        return "/originalstyle.css";
+        //if (darkMode = false) {
+            return "/originalstyle.css";//}
+        //else {
+        //return "/darkmode.css";
+        //}
+
     }
 
 
@@ -32,7 +37,7 @@ public class SystemData{
         this.font = font;
     }
 
-    private boolean darkMode =false;
+    public boolean darkMode =false;
     private String font = "Normal";
 
 }
