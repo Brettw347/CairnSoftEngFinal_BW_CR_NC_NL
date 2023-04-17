@@ -20,7 +20,7 @@
             <HBox prefHeight="100.0" prefWidth="217.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Font" wrappingWidth="54.13671875" />
-                  <ChoiceBox prefHeight="25.0" prefWidth="77.0" />
+                  <ChoiceBox fx:id="fontChoice" prefHeight="25.0" prefWidth="77.0" />
                </children>
             </HBox>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
