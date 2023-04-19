@@ -19,7 +19,7 @@ import static java.lang.Double.parseDouble;
 public class TipCalculatorController {
     @FXML
     private ChoiceBox percentChoice;
-    ObservableList<Integer> percentages = FXCollections.observableArrayList(10, 15, 20, 25);
+    ObservableList<Double> percentages = FXCollections.observableArrayList(10.00, 15.00, 20.00, 25.00);
 
     @FXML
     private Label tipTotal;
@@ -36,6 +36,7 @@ public class TipCalculatorController {
     protected void onCalculateButtonClick(){
         double percent = (double) percentChoice.getValue();
         double tip = (percent * .01) * parseDouble(total.getText());
+        tip = Math.round(tip * 100.0) / 100.0;
         tipTotal.setText("$" + tip);
     }
 
