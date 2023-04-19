@@ -10,24 +10,20 @@
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button layoutX="142.0" layoutY="104.0" mnemonicParsing="false" onAction="#ToMadlibs" prefHeight="49.0" prefWidth="216.0" text="Madlibs">
+      <Button layoutX="142.0" layoutY="104.0" mnemonicParsing="false" onAction="#ToSports" prefHeight="49.0" prefWidth="216.0" text="Sports">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button layoutX="142.0" layoutY="166.0" mnemonicParsing="false" onAction="#ToSports" prefHeight="49.0" prefWidth="216.0" text="Sports">
-         <font>
-            <Font size="24.0" />
-         </font></Button>
-      <Button layoutX="142.0" layoutY="225.0" mnemonicParsing="false" onAction="#ToVerseOfTheDay" prefHeight="49.0" prefWidth="216.0" text="Verse of the Day">
+      <Button layoutX="142.0" layoutY="167.0" mnemonicParsing="false" onAction="#ToVerseOfTheDay" prefHeight="49.0" prefWidth="216.0" text="Verse of the Day">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="142.0" layoutY="285.0" mnemonicParsing="false" onAction="#ToTrivia" prefHeight="49.0" prefWidth="216.0" text="Trivia">
+      <Button layoutX="142.0" layoutY="232.0" mnemonicParsing="false" onAction="#ToTrivia" prefHeight="49.0" prefWidth="216.0" text="Trivia">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button layoutX="142.0" layoutY="345.0" mnemonicParsing="false" onAction="#ToSettings" prefHeight="49.0" prefWidth="216.0" text="Settings">
+      <Button layoutX="142.0" layoutY="292.0" mnemonicParsing="false" onAction="#ToSettings" prefHeight="49.0" prefWidth="216.0" text="Settings">
          <font>
             <Font size="24.0" />
          </font></Button>

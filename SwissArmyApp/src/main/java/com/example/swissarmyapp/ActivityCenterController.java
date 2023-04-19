@@ -31,16 +31,6 @@ public class ActivityCenterController {
         stage.show();
     }
     @FXML
-    public void ToMadlibs(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("madlibs.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
-        scene.getStylesheets().add(HelloApplication.class.getResource(SystemData.currentStyle()).toExternalForm());
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Madlibs");
-        stage.setScene(scene);
-        stage.show();
-    }
-    @FXML
     public void ToSports(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("sports.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
