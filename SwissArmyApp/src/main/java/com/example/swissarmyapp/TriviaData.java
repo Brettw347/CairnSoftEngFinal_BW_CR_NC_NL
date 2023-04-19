@@ -1,33 +1,20 @@
 package com.example.swissarmyapp;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TriviaData {
-    private static String question = "Who was the first president to live in the White House?";
+    private static List<Question> questions = new ArrayList<>();
 
-    private static String answer = "A) John Adams";
-
-    private static boolean CorrectAnswer = true;
-
-    public static String getQuestion() {
-        return question;
+    static {
+        questions.add(new Question("Who was the first president to live in the White House?",
+                "B) Goerge Washington", true));
+        questions.add(new Question("This is the second question?", "A) hello", true));
+        questions.add(new Question("This is the third question?", "C) yurrr",
+                true));
     }
 
-    public static void setQuestion(String question) {
-        TriviaData.question = question;
-    }
-
-    public static String getAnswer() {
-        return answer;
-    }
-
-    public static void setAnswer(String answer) {
-        TriviaData.answer = answer;
-    }
-
-    public static boolean isCorrectAnswer() {
-        return CorrectAnswer;
-    }
-
-    public static void setCorrectAnswer(boolean correctAnswer) {
-        CorrectAnswer = correctAnswer;
+    public static List<Question> getQuestions() {
+        return questions;
     }
 }
