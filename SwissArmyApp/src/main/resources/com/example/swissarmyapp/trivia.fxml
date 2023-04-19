@@ -14,7 +14,7 @@
          <font>
             <Font name="System Bold" size="36.0" />
          </font></Label>
-      <Label layoutX="69.0" layoutY="163.0" prefHeight="54.0" prefWidth="334.0" text="Question 1: Who was the first president to live in the White House?" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="questionLabel" layoutX="69.0" layoutY="136.0" prefHeight="54.0" prefWidth="334.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>
@@ -24,7 +24,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="166.0" layoutY="321.0" mnemonicParsing="false" text="B) George Washington">
+      <Button layoutX="166.0" layoutY="321.0" mnemonicParsing="false" onAction="#showAnswer" text="B) George Washington">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -39,5 +39,15 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
+      <Button layoutX="363.0" layoutY="450.0" mnemonicParsing="false" onAction="#nextQuestion" text="Next Question">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="answerLabel" layoutX="130.0" layoutY="214.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
