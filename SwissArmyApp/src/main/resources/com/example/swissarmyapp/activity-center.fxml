@@ -2,18 +2,34 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.ActivityCenterController">
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.ActivityCenterController">
    <children>
-      <VBox layoutX="200.0" layoutY="42.0" prefHeight="257.0" prefWidth="200.0">
-         <children>
-            <Button mnemonicParsing="false" onAction="#ToTipCalculator" text="Tip Calculator" />
-            <Button mnemonicParsing="false" onAction="#ToMadlibs" text="Madlibs" />
-            <Button mnemonicParsing="false" onAction="#ToSports" text="Sports" />
-            <Button mnemonicParsing="false" onAction="#ToVerseOfTheDay" text="Verse of the Day" />
-            <Button mnemonicParsing="false" onAction="#ToTrivia" text="Trivia" />
-            <Button mnemonicParsing="false" onAction="#ToSettings" text="Settings" />
-         </children>
-      </VBox>
+      <Button layoutX="142.0" layoutY="42.0" mnemonicParsing="false" onAction="#ToTipCalculator" prefHeight="49.0" prefWidth="216.0" text="Tip Calculator">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button layoutX="142.0" layoutY="104.0" mnemonicParsing="false" onAction="#ToSports" prefHeight="49.0" prefWidth="216.0" text="Sports">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button layoutX="142.0" layoutY="167.0" mnemonicParsing="false" onAction="#ToVerseOfTheDay" prefHeight="49.0" prefWidth="216.0" text="Verse of the Day">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="142.0" layoutY="232.0" mnemonicParsing="false" onAction="#ToTrivia" prefHeight="49.0" prefWidth="216.0" text="Trivia">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Button layoutX="142.0" layoutY="292.0" mnemonicParsing="false" onAction="#ToSettings" prefHeight="49.0" prefWidth="216.0" text="Settings">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+      <Text layoutX="152.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose an Activity">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
    </children>
 </AnchorPane>

@@ -2,12 +2,38 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.SettingsController">
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.SettingsController">
    <children>
-      <VBox layoutX="250.0" layoutY="100.0" prefHeight="200.0" prefWidth="100.0">
+      <Button layoutX="37.0" layoutY="25.0" mnemonicParsing="false" onAction="#Back" prefHeight="57.0" prefWidth="61.0" text="Return to Activities Page" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="10.0" />
+         </font></Button>
+      <VBox layoutX="150.0" layoutY="42.0" prefHeight="407.0" prefWidth="201.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#Back" text="Back" />
+            <CheckBox mnemonicParsing="false" onAction="#DarkMode" prefHeight="66.0" prefWidth="157.0" text="Dark Mode" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Font Size" wrappingWidth="148.13671875" />
+            <ScrollBar fx:id="FontSize" blendMode="MULTIPLY" max="25.0" nodeOrientation="LEFT_TO_RIGHT" onDragDone="#ChangedFontSize" prefHeight="14.0" prefWidth="219.0" value="12.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="29.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
+            <HBox prefHeight="100.0" prefWidth="217.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Font" wrappingWidth="54.13671875" />
+                  <ChoiceBox fx:id="fontChoice" prefHeight="25.0" prefWidth="77.0" />
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="46.0" layoutY="85.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="110.0" text="Change" />
+                  <Text layoutX="36.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Username">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="26.0" layoutY="54.0" />
+               </children>
+            </AnchorPane>
          </children>
       </VBox>
    </children>
