@@ -34,7 +34,6 @@ public class TipCalculatorController {
 
     @FXML
     protected void onCalculateButtonClick(){
-        percentChoice.setValue(10.0);
         double percent = (double) percentChoice.getValue();
         double tip = (percent * .01) * parseDouble(total.getText());
         tip = Math.round(tip * 100.0) / 100.0;
