@@ -70,18 +70,15 @@ public class TriviaController {
         answerLabel.setText("");
 
         Button[] buttons = {button1, button2, button3, button4};
-        String[][] texts = {{"New Text 1", "Different Text 1", "Third Text 1", "4th text 1"},
-                {"New Text 2", "Different Text 2", "Third Text 2", "4th text 2"},
-                {"New Text 3", "Different Text 3", "Third Text 3", "4th text 3"},
-                {"New Text 4", "Different Text 4", "Third Text 4", "4th text 4"}};
+        String[][] texts = {{"a) George Washington", "a) Roman Empire", "a) World War I", "a) Christopher Columbus",
+                "a) Marie Curie", "a) The American Revolution", "a) Alexander Graham",
+                "a) Karl Marx and Friedrich Engels", "a) Neil Armstrong", "a) D-Day Invasion", "a) Leonardo da Vinci",
+                "a) Harper Lee", "a) Margaret Thatcher", "a) Alexander Fleming"},
+                {"text 2", "text 2.2", "text 2.3"},
+                {"text 3", "text 3.2", "text 3.3"}, {"text 4", "text 4.2", "text 4.3"}};
         for (int i = 0; i < buttons.length; i++) {
-            int index = clicked ? i + 1 : i;
-            if (clicked && index == texts[i].length) {
-                index = 0;
-            }
-            buttons[i].setText(texts[i][index]);
+            buttons[i].setText(texts[i][currentQuestionIndex % texts[i].length]);
         }
-        clicked = !clicked;
     }
     public void Back(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
