@@ -22,8 +22,23 @@ public class TriviaController {
     @FXML
     private Label answerLabel;
 
+    @FXML
+    private Button button1;
+
+    @FXML
+    private Button button2;
+
+    @FXML
+    private Button button3;
+
+    @FXML
+    private Button button4;
+
+
     private List<Question> questions;
     private int currentQuestionIndex;
+    private boolean clicked = false;
+    private String[][] previousTexts = new String[4][4];
 
     public void initialize() {
         // Load questions from TriviaData class
@@ -53,6 +68,20 @@ public class TriviaController {
 
         // Clear answer label
         answerLabel.setText("");
+
+        Button[] buttons = {button1, button2, button3, button4};
+        String[][] texts = {{"New Text 1", "Different Text 1", "Third Text 1", "4th text 1"},
+                {"New Text 2", "Different Text 2", "Third Text 2", "4th text 2"},
+                {"New Text 3", "Different Text 3", "Third Text 3", "4th text 3"},
+                {"New Text 4", "Different Text 4", "Third Text 4", "4th text 4"}};
+        for (int i = 0; i < buttons.length; i++) {
+            int index = clicked ? i + 1 : i;
+            if (clicked && index == texts[i].length) {
+                index = 0;
+            }
+            buttons[i].setText(texts[i][index]);
+        }
+        clicked = !clicked;
     }
     public void Back(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));

@@ -19,22 +19,22 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="166.0" layoutY="282.0" mnemonicParsing="false" text="A) John Adams">
+      <Button fx:id="button1" layoutX="166.0" layoutY="282.0" mnemonicParsing="false" text="A) John Adams">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="166.0" layoutY="321.0" mnemonicParsing="false" onAction="#showAnswer" text="B) George Washington">
+      <Button fx:id="button2" layoutX="166.0" layoutY="321.0" mnemonicParsing="false" onAction="#showAnswer" text="B) George Washington">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="166.0" layoutY="362.0" mnemonicParsing="false" text="C) Thomas Jefferson">
+      <Button fx:id="button3" layoutX="166.0" layoutY="362.0" mnemonicParsing="false" text="C) Thomas Jefferson">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="166.0" layoutY="399.0" mnemonicParsing="false" text="D) James Madison">
+      <Button fx:id="button4" layoutX="166.0" layoutY="399.0" mnemonicParsing="false" text="D) James Madison">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

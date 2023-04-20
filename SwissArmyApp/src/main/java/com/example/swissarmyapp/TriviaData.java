@@ -8,7 +8,7 @@ public class TriviaData {
 
     static {
         questions.add(new Question("Who was the first president to live in the White House?",
-                "B) Goerge Washington", true));
+                "THAT IS CORRECT!!!", true));
         questions.add(new Question("This is the second question?", "A) hello", true));
         questions.add(new Question("This is the third question?", "C) yurrr",
                 true));
