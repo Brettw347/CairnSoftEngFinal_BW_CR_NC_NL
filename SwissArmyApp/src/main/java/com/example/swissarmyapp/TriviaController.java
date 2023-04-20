@@ -72,19 +72,19 @@ public class TriviaController {
         Button[] buttons = {button1, button2, button3, button4};
         String[][] texts = {{"a) George Washington", "a) Roman Empire", "a) World War I", "a) Christopher Columbus",
                 "a) Marie Curie", "a) The American Revolution", "a) Alexander Graham",
-                "a) Karl Marx and Friedrich Engels", "a) Neil Armstrong", "a) D-Day Invasion", "a) Leonardo da Vinci",
+                "a) Karl Marx and Friedrich Engels", "a) Neil Armstrong", "a) Julius Caesar", "a) Leonardo da Vinci",
                 "a) Harper Lee", "a) Margaret Thatcher", "a) Alexander Fleming"},
                 {"b) Thomas Jefferson", "b) Greek Empire", "b) World War II", "b) Ferdinand Magellan",
                         "b) Rosalind Franklin", "b) The Civil War", "b) Thomas Edison", "b) Vladimir Lenin",
-                        "b) Buzz Aldrin", "b) Battle of Stalingrad", "b) Michelangelo", "b ) Ernest Hemingway",
+                        "b) Buzz Aldrin", "b) Nero", "b) Michelangelo", "b ) Ernest Hemingway",
                 "b) Theresa May", "b) Louis Pasteur", "b) The Fall of Rome"},
                 {"c) John Adams", "c) Egyptian Empire", "c) The Renaissance", "c) Vasco da Gama", "c) Ada Lovelace",
                         "c) The Great Depression", "c) Nikola Tesla", "c) Nikola Tesla", "c) Yuri Gagarin",
-                        "c) Pearl Harbor", "c) Vincent van Gogh", "c) William Faulkner", "c) Angela Merkel",
+                        "c) Caligula", "c) Vincent van Gogh", "c) William Faulkner", "c) Angela Merkel",
                         "c) Robert Koch", "c) The Roman Republic"},
                 {"d) Abraham Lincoln", "d) Babylonian Empire", "d) The Industrial Revolution", "d) Marco Polo",
                 "d) Jane Goodall", "d) The Cold War", "d) Samuel Morse", "d) Mao Zedong", "d) Alan Shepard ",
-                "d) Atomic Bombing of Hiroshima and Nagasaki", "d) Pablo Picasso", "d) F. Scott Fitzgerald",
+                "d) Augustus", "d) Pablo Picasso", "d) F. Scott Fitzgerald",
                 "d) Indira Gandhi", "d) Jonas Salk", "d) The Roman Empire"}};
         for (int i = 0; i < buttons.length; i++) {
             buttons[i].setText(texts[i][currentQuestionIndex % texts[i].length]);

@@ -25,8 +25,8 @@ public class TriviaData {
                 "a) Karl Marx and Friedrich Engels", true));
         questions.add(new Question("Who was the first person to walk on the moon?", "a) Neil Armstrong",
                 true));
-        questions.add(new Question("What was the most significant event in World War II?",
-                "d) Atomic Bombing of Hiroshima and Nagasaki", true));
+        questions.add(new Question("Who was the first emperor of Rome",
+                "d) Augustus", true));
         questions.add(new Question("Who painted the Mona Lisa?", "a ) Leonardo da Vinci", true));
         questions.add(new Question("Who wrote 'To Kill A Mockingbird'?", "a ) Harper Lee", true));
         questions.add(new Question("Who was the first female prime minister of Great Britain?",
