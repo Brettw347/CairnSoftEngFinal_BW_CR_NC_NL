@@ -51,10 +51,28 @@ public class TriviaController {
     }
 
     public void showAnswer(ActionEvent event) {
+//        Question currentQuestion = questions.get(currentQuestionIndex);
+//        if (button1.getText().equals("a) George Washington")) {
+//            answerLabel.setText(currentQuestion.getAnswer());
+//        }
+//        if (button2.getText().equals("b) World War II")) {
+//            answerLabel.setText(currentQuestion.getAnswer());
+//        }
+//        if (button3.getText().equals("c) Egyptian Empire")) {
+//            answerLabel.setText(currentQuestion.getAnswer());
+//        }
+//        if (button4.getText().equals("d) Augustus ")) {
+//            answerLabel.setText(currentQuestion.getAnswer());
+//        }
         Question currentQuestion = questions.get(currentQuestionIndex);
-        answerLabel.setText(currentQuestion.getAnswer());
+        Button clickedButton = (Button) event.getSource();
+        if ((clickedButton == button1 || clickedButton == button2 || clickedButton == button3 || clickedButton == button4)
+                && clickedButton.getText().equals(currentQuestion.getAnswer())) {
+            answerLabel.setText("That is CORRECT!!!");
+        } else {
+            answerLabel.setText("INCORRECT guess again");
+        }
     }
-
     public void nextQuestion(ActionEvent event) {
         // Move to next question
         currentQuestionIndex++;
@@ -71,7 +89,7 @@ public class TriviaController {
 
         Button[] buttons = {button1, button2, button3, button4};
         String[][] texts = {{"a) George Washington", "a) Roman Empire", "a) World War I", "a) Christopher Columbus",
-                "a) Marie Curie", "a) The American Revolution", "a) Alexander Graham",
+                "a) Marie Curie", "a) The American Revolution", "a) Alexander Graham Bell",
                 "a) Karl Marx and Friedrich Engels", "a) Neil Armstrong", "a) Julius Caesar", "a) Leonardo da Vinci",
                 "a) Harper Lee", "a) Margaret Thatcher", "a) Alexander Fleming"},
                 {"b) Thomas Jefferson", "b) Greek Empire", "b) World War II", "b) Ferdinand Magellan",
