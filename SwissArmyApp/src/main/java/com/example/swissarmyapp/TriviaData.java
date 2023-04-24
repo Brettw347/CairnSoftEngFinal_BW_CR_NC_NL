@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TriviaData {
+
+//  The list of questions
     private static List<Question> questions = new ArrayList<>();
 
+//  This initializes the list of questions
     static {
         questions.add(new Question("Who was the first president of the United States?",
                 "a) George Washington", true));
