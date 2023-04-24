@@ -17,9 +17,6 @@ public class TriviaController {
     private Label questionLabel;
 
     @FXML
-    private Button answerButton;
-
-    @FXML
     private Label answerLabel;
 
     @FXML
@@ -37,8 +34,6 @@ public class TriviaController {
 
     private List<Question> questions;
     private int currentQuestionIndex;
-    private boolean clicked = false;
-    private String[][] previousTexts = new String[4][4];
 
     public void initialize() {
         // Load questions from TriviaData class
@@ -51,26 +46,13 @@ public class TriviaController {
     }
 
     public void showAnswer(ActionEvent event) {
-//        Question currentQuestion = questions.get(currentQuestionIndex);
-//        if (button1.getText().equals("a) George Washington")) {
-//            answerLabel.setText(currentQuestion.getAnswer());
-//        }
-//        if (button2.getText().equals("b) World War II")) {
-//            answerLabel.setText(currentQuestion.getAnswer());
-//        }
-//        if (button3.getText().equals("c) Egyptian Empire")) {
-//            answerLabel.setText(currentQuestion.getAnswer());
-//        }
-//        if (button4.getText().equals("d) Augustus ")) {
-//            answerLabel.setText(currentQuestion.getAnswer());
-//        }
         Question currentQuestion = questions.get(currentQuestionIndex);
         Button clickedButton = (Button) event.getSource();
         if ((clickedButton == button1 || clickedButton == button2 || clickedButton == button3 || clickedButton == button4)
                 && clickedButton.getText().equals(currentQuestion.getAnswer())) {
-            answerLabel.setText("That is CORRECT!!!");
+            answerLabel.setText("CORRECT!!!");
         } else {
-            answerLabel.setText("INCORRECT guess again");
+            answerLabel.setText("Wrong Guess Again");
         }
     }
     public void nextQuestion(ActionEvent event) {
@@ -89,19 +71,19 @@ public class TriviaController {
 
         Button[] buttons = {button1, button2, button3, button4};
         String[][] texts = {{"a) George Washington", "a) Roman Empire", "a) World War I", "a) Christopher Columbus",
-                "a) Marie Curie", "a) The American Revolution", "a) Alexander Graham Bell",
-                "a) Karl Marx and Friedrich Engels", "a) Neil Armstrong", "a) Julius Caesar", "a) Leonardo da Vinci",
-                "a) Harper Lee", "a) Margaret Thatcher", "a) Alexander Fleming"},
+                "a) Marie Curie", "a) The American Revolution", "a) Samuel Morse",
+                "a) Joseph Stalin", "a) Neil Armstrong", "a) Julius Caesar", "a) Michelangelo",
+                "a) Harper Lee", "a) Angela Merkel", "a) Louis Pasteur", "a) The Punic Wars"},
                 {"b) Thomas Jefferson", "b) Greek Empire", "b) World War II", "b) Ferdinand Magellan",
                         "b) Rosalind Franklin", "b) The Civil War", "b) Thomas Edison", "b) Vladimir Lenin",
-                        "b) Buzz Aldrin", "b) Nero", "b) Michelangelo", "b ) Ernest Hemingway",
-                "b) Theresa May", "b) Louis Pasteur", "b) The Fall of Rome"},
+                        "b) Buzz Aldrin", "b) Nero", "b) Leonardo da Vinci", "b ) Ernest Hemingway",
+                "b) Theresa May", "b) Alexander Fleming", "b) The Fall of Rome"},
                 {"c) John Adams", "c) Egyptian Empire", "c) The Renaissance", "c) Vasco da Gama", "c) Ada Lovelace",
-                        "c) The Great Depression", "c) Nikola Tesla", "c) Nikola Tesla", "c) Yuri Gagarin",
-                        "c) Caligula", "c) Vincent van Gogh", "c) William Faulkner", "c) Angela Merkel",
+                        "c) The Great Depression", "c) Nikola Tesla", "c) Karl Marx and Friedrich Engels", "c) Yuri Gagarin",
+                        "c) Caligula", "c) Vincent van Gogh", "c) William Faulkner", "c) Margaret Thatcher",
                         "c) Robert Koch", "c) The Roman Republic"},
                 {"d) Abraham Lincoln", "d) Babylonian Empire", "d) The Industrial Revolution", "d) Marco Polo",
-                "d) Jane Goodall", "d) The Cold War", "d) Samuel Morse", "d) Mao Zedong", "d) Alan Shepard ",
+                "d) Jane Goodall", "d) The Cold War", "d) Alexander Graham Bell", "d) Mao Zedong", "d) Alan Shepard ",
                 "d) Augustus", "d) Pablo Picasso", "d) F. Scott Fitzgerald",
                 "d) Indira Gandhi", "d) Jonas Salk", "d) The Roman Empire"}};
         for (int i = 0; i < buttons.length; i++) {
