@@ -20,6 +20,9 @@ public class VerseOfTheDayController {
     @FXML
     private ImageView image;
 
+
+
+    //Returns the user to the Activity Center page
     public void Back(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
