@@ -17,9 +17,6 @@ public class TriviaController {
     private Label questionLabel;
 
     @FXML
-    private Button answerButton;
-
-    @FXML
     private Label answerLabel;
 
     @FXML
@@ -34,62 +31,106 @@ public class TriviaController {
     @FXML
     private Button button4;
 
-
+//  List of questions
     private List<Question> questions;
-    private int currentQuestionIndex;
-    private boolean clicked = false;
-    private String[][] previousTexts = new String[4][4];
 
+//    Index of the current question
+    private int currentQuestionIndex;
+
+//    This initializes the controller
     public void initialize() {
-        // Load questions from TriviaData class
+
+        // This loads questions from TriviaData class
         questions = TriviaData.getQuestions();
 
-        // Display first question
+//      This sets the current question index to 0
         currentQuestionIndex = 0;
+
+//      This gets the current question
         Question currentQuestion = questions.get(currentQuestionIndex);
+
+//      This sets the question label text to the current question
         questionLabel.setText(currentQuestion.getQuestion());
     }
 
     public void showAnswer(ActionEvent event) {
+//      This gets the current question
         Question currentQuestion = questions.get(currentQuestionIndex);
-        answerLabel.setText(currentQuestion.getAnswer());
-    }
 
+//      This gets the button that was clicked
+        Button clickedButton = (Button) event.getSource();
+
+//      This checks if the clicked button's text matches the answer to the current question
+        if ((clickedButton == button1 || clickedButton == button2 || clickedButton == button3 || clickedButton == button4)
+                && clickedButton.getText().equals(currentQuestion.getAnswer())) {
+//          If the answer is correct, display "CORRECT!!!"
+            answerLabel.setText("CORRECT!!!");
+        } else {
+//          If the answer is incorrect, display "Wrong Guess Again"
+            answerLabel.setText("Wrong Guess Again");
+        }
+    }
     public void nextQuestion(ActionEvent event) {
-        // Move to next question
+//      This will increment the current question index
         currentQuestionIndex++;
+
+//      If the current question index is greater than or equal to the number of questions, reset it to 0
         if (currentQuestionIndex >= questions.size()) {
             currentQuestionIndex = 0;
         }
 
-        // Display new question
+//        This gets the current question
         Question currentQuestion = questions.get(currentQuestionIndex);
+
+//      This sets the question label text to the current question
         questionLabel.setText(currentQuestion.getQuestion());
 
         // Clear answer label
         answerLabel.setText("");
 
+//      This sets the text for each button
         Button[] buttons = {button1, button2, button3, button4};
-        String[][] texts = {{"New Text 1", "Different Text 1", "Third Text 1", "4th text 1"},
-                {"New Text 2", "Different Text 2", "Third Text 2", "4th text 2"},
-                {"New Text 3", "Different Text 3", "Third Text 3", "4th text 3"},
-                {"New Text 4", "Different Text 4", "Third Text 4", "4th text 4"}};
+        String[][] texts = {{"a) George Washington", "a) Roman Empire", "a) World War I", "a) Christopher Columbus",
+                "a) Marie Curie", "a) The American Revolution", "a) Samuel Morse",
+                "a) Joseph Stalin", "a) Neil Armstrong", "a) Julius Caesar", "a) Michelangelo",
+                "a) Harper Lee", "a) Angela Merkel", "a) Louis Pasteur", "a) The Punic Wars"},
+                {"b) Thomas Jefferson", "b) Greek Empire", "b) World War II", "b) Ferdinand Magellan",
+                        "b) Rosalind Franklin", "b) The Civil War", "b) Thomas Edison", "b) Vladimir Lenin",
+                        "b) Buzz Aldrin", "b) Nero", "b) Leonardo da Vinci", "b ) Ernest Hemingway",
+                "b) Theresa May", "b) Alexander Fleming", "b) The Fall of Rome"},
+                {"c) John Adams", "c) Egyptian Empire", "c) The Renaissance", "c) Vasco da Gama", "c) Ada Lovelace",
+                        "c) The Great Depression", "c) Nikola Tesla", "c) Karl Marx and Friedrich Engels", "c) Yuri Gagarin",
+                        "c) Caligula", "c) Vincent van Gogh", "c) William Faulkner", "c) Margaret Thatcher",
+                        "c) Robert Koch", "c) The Roman Republic"},
+                {"d) Abraham Lincoln", "d) Babylonian Empire", "d) The Industrial Revolution", "d) Marco Polo",
+                "d) Jane Goodall", "d) The Cold War", "d) Alexander Graham Bell", "d) Mao Zedong", "d) Alan Shepard ",
+                "d) Augustus", "d) Pablo Picasso", "d) F. Scott Fitzgerald",
+                "d) Indira Gandhi", "d) Jonas Salk", "d) The Roman Empire"}};
         for (int i = 0; i < buttons.length; i++) {
-            int index = clicked ? i + 1 : i;
-            if (clicked && index == texts[i].length) {
-                index = 0;
-            }
-            buttons[i].setText(texts[i][index]);
+//          This sets the text for each button
+            buttons[i].setText(texts[i][currentQuestionIndex % texts[i].length]);
         }
-        clicked = !clicked;
     }
     public void Back(ActionEvent event) throws IOException {
+//      Load the activity-center.fxml file
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
+
+//       Create a new scene with the loaded fxml file
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+
+//      Add the current style to the scene
         scene.getStylesheets().add(HelloApplication.class.getResource(SystemData.currentStyle()).toExternalForm());
+
+//      Get the current stage
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+//      Set the title of the stage
         stage.setTitle("Activity Center");
+
+//      Set the scene of the stage
         stage.setScene(scene);
+
+//      Show the stage
         stage.show();
     }
 

@@ -20,22 +20,24 @@ import static java.lang.Double.parseDouble;
 public class TipCalculatorController {
     @FXML
     private ChoiceBox percentChoice;
+    //Creates the list of percentages for the user to choose to calculate the tip from
     ObservableList<Double> percentages = FXCollections.observableArrayList(10.00, 15.00, 20.00, 25.00);
 
     @FXML
     private Label tipTotal;
+    //Forces tipTotal to print with two decimal places, even if it can be rounded to one
+    DecimalFormat df = new DecimalFormat("#.00");
 
     @FXML
     private TextField total;
 
-    DecimalFormat df = new DecimalFormat("#.00");
-
-
+   //Initializes the percentChoice ChoiceBox in the tip calculator
     @FXML
     private void initialize() {
         percentChoice.setItems(percentages);
     }
 
+    //Takes in the users total and chosen tip percentage and outputs how much the tip will cost
     @FXML
     protected void onCalculateButtonClick(){
         double percent = (double) percentChoice.getValue();
@@ -43,6 +45,7 @@ public class TipCalculatorController {
         tipTotal.setText("$" + df.format(tip));
     }
 
+    //Returns the user to the Activity Center page
     @FXML
     public void Back(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
