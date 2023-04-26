@@ -13,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import static java.lang.Double.parseDouble;
 
@@ -24,11 +25,13 @@ public class TipCalculatorController {
 
     @FXML
     private Label tipTotal;
+    //Forces tipTotal to print with two decimal places, even if it can be rounded to one
+    DecimalFormat df = new DecimalFormat("#.00");
 
     @FXML
     private TextField total;
 
-    //Initializes the percentChoice ChoiceBox in the tip calculator
+   //Initializes the percentChoice ChoiceBox in the tip calculator
     @FXML
     private void initialize() {
         percentChoice.setItems(percentages);
@@ -39,8 +42,7 @@ public class TipCalculatorController {
     protected void onCalculateButtonClick(){
         double percent = (double) percentChoice.getValue();
         double tip = (percent * .01) * parseDouble(total.getText());
-        tip = Math.round(tip * 100.0) / 100.0;
-        tipTotal.setText("$" + tip);
+        tipTotal.setText("$" + df.format(tip));
     }
 
     //Returns the user to the Activity Center page
