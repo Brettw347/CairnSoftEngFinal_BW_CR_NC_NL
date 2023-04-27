@@ -6,10 +6,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.Random;
 import java.io.IOException;
+
+import static jdk.xml.internal.SecuritySupport.getResourceAsStream;
 
 public class VerseOfTheDayController {
 
@@ -20,7 +27,16 @@ public class VerseOfTheDayController {
     @FXML
     private ImageView image;
 
+    @FXML
+    private void initialize(){
+        Random rand = new Random();
+        int randInt1 = rand.nextInt(31);
+        int randInt2 = rand.nextInt(5);
+        verse.setText(Verses.verseList[randInt1]);
+        reference.setText(Verses.referenceList[randInt1]);
 
+
+    }
 
     //Returns the user to the Activity Center page
     public void Back(ActionEvent event) throws IOException {
