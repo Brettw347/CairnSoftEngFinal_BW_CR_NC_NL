@@ -10,51 +10,33 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Random;
-
 import java.io.IOException;
+
+import static jdk.xml.internal.SecuritySupport.getResourceAsStream;
 
 public class VerseOfTheDayController {
 
     @FXML
-    private static Label reference;
+    private Label reference;
     @FXML
-    private static Label verse;
+    private Label verse;
     @FXML
-    private static ImageView image;
+    private ImageView image;
 
-    public static void selectVerse() throws Exception{
-        BufferedReader br = new BufferedReader(new FileReader("src/main/resources/Verses.csv"));
-        //Random rand = new Random();
-        int randInt = 3;
-        //rand.nextInt(31);
-        int i = 0;
-        String line = "";
-        while((line = br.readLine()) != null && i != randInt){
-            String[] verseOption = line.split(",");
-            if(i == randInt){
-                verse.setText(verseOption[0]);
-                reference.setText(verseOption[1]);
-                return;
-            }else{
-                i++;
-            }
-        }
-    }
-
-    public static void selectImage(){
+    @FXML
+    private void initialize(){
         Random rand = new Random();
-        int randInt = 0;
-        // rand.nextInt(5);
-        if(randInt == 0);
-            Image picture = new Image(VerseOfTheDayController.class.getResourceAsStream("src/main/resources/VotD Images/img1.jpg"));
-            image.setImage(picture);
-    }
+        int randInt1 = rand.nextInt(31);
+        int randInt2 = rand.nextInt(5);
+        verse.setText(Verses.verseList[randInt1]);
+        reference.setText(Verses.referenceList[randInt1]);
 
-    VerseOfTheDayController.selectVerse();
-        VerseOfTheDayController.selectImage();
+
+    }
 
     //Returns the user to the Activity Center page
     public void Back(ActionEvent event) throws IOException {
