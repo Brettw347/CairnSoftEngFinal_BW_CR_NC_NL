@@ -14,7 +14,7 @@ public class Verses {
     "Again Jesus spoke to them, saying, 'I am the light of the world. Whoever follows me will not walk in darkness, but will have the light of life.",
     "...be strong and courageous. Do not be frightened, and do not be dismayed, for the Lord your God is with you wherever you go.",
     "The steadfast love of the Lord never ceases; his mercies never come to an end; they are new every morning; great is your faithfulness",
-    "",
+    "Therefore encourage one another and build one another up, just as you are doing.",
     "Come to me, all who labor and are heavy laden, and I will give you rest.",
     "Therefore I tell you, do not be anxious about your life, what you will eat or what you will drink, nor about your body, what you will put on. Is not life more than food, and the body more than clothing?",
     "But seek first the kingdom of God and his righteousness, and all these things will be added to you.",
@@ -34,7 +34,7 @@ public class Verses {
     "And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus."};
     static String[] referenceList = {"1 Corinthians 15:58", "1 John 4:4", "1 Peter 5:6-7", "2 Chronicles 15:7", "Colossians 3:23",
             "Deuteronomy 31:6", "Galatians 6:9", "Isaiah 40:31", "Isaiah 41:10", "John 16:33", "John 8:12", "Joshua 1:9",
-            "Lamentations 3:22-23", "", "Matthew 11:28", "Matthew 6:25", "Matthew 6:33", "Philippians 4:13",
+            "Lamentations 3:22-23", "1 Thessalonians 5:11", "Matthew 11:28", "Matthew 6:25", "Matthew 6:33", "Philippians 4:13",
             "Philippians 4:6", "Proverbs 18:10", "Proverbs 21:21", "Proverbs 27:19", "Proverbs 3:5-6", "Psalm 118:6",
             "Psalm 34:8", "Psalm 37:23-24", "Romans 12:12", "Romans 12:2", "Romans 15:13", "Romans 8:28", "Philippians 4:7"};
 }
