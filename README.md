@@ -37,9 +37,6 @@ This program is designed to run on a tablet running Windows 11 version 22H2.
 ### Tip Calculator
 ![Tip Calculator](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Tip%20Calculator.png)
 
-### Madlibs
-![Madlibs](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Madlibs.png)
-
 ### Sports 
 ![Sports](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Sports.png)
 
