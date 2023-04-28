@@ -16,7 +16,6 @@ import java.io.InputStream;
 import java.util.Random;
 import java.io.IOException;
 
-import static jdk.xml.internal.SecuritySupport.getResourceAsStream;
 
 public class VerseOfTheDayController {
 
