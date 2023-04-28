@@ -32,8 +32,7 @@ public class SettingsController {
         stage.show();
     }
     public void DarkMode(){
-        SystemData systemdata = new SystemData();
-        systemdata.darkMode = true;
+        SystemData.setDarkMode("/darkmode.css");
     }
     public void ChangedFontSize(){
     }
