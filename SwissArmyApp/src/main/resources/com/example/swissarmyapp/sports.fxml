@@ -7,23 +7,28 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.SportsController">
    <children>
+      <VBox layoutX="150.0" layoutY="14.0" prefHeight="242.0" prefWidth="341.0">
+         <children>
+            <Label text="Eagles 2022-23 Stats">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Eagles.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="record" text="Final record (NULL)">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
       <Button layoutX="23.0" layoutY="25.0" mnemonicParsing="false" onAction="#Back" prefHeight="57.0" prefWidth="61.0" text="Return to Activities Page" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="10.0" />
          </font></Button>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="150.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../Eagles.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="102.0" layoutY="14.0" text="Eagles 2022-23 Stats">
-         <font>
-            <Font size="32.0" />
-         </font></Label>
-      <Label layoutX="144.0" layoutY="200.0" text="Final record (14-3-0)">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
    </children>
 </AnchorPane>
