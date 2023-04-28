@@ -2,11 +2,8 @@ package com.example.swissarmyapp;
 
 public class SystemData{
     public static String currentStyle() {
-        //if (darkMode = false) {
-            return "/originalstyle.css";//}
-        //else {
-        //return "/darkmode.css";
-        //}
+        return darkMode;
+
 
     }
 
@@ -21,14 +18,6 @@ public class SystemData{
         this.fontSize = fontSize;
     }
 
-    public boolean isDarkMode() {
-        return darkMode;
-    }
-
-    public void setDarkMode(boolean darkMode) {
-        this.darkMode = darkMode;
-    }
-
     public String getFont() {
         return font;
     }
@@ -37,8 +26,14 @@ public class SystemData{
         this.font = font;
     }
 
-    public boolean darkMode =false;
-    private String font = "Normal";
+
+
+    public static void setDarkMode(String darkMode) {
+        SystemData.darkMode = darkMode;
+    }
+
+    private static String darkMode = "/originalstyle.css";
+    private static String font = "Normal";
 
 }
 
