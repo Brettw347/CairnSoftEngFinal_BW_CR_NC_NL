@@ -37,4 +37,20 @@ public class Verses {
             "Lamentations 3:22-23", "1 Thessalonians 5:11", "Matthew 11:28", "Matthew 6:25", "Matthew 6:33", "Philippians 4:13",
             "Philippians 4:6", "Proverbs 18:10", "Proverbs 21:21", "Proverbs 27:19", "Proverbs 3:5-6", "Psalm 118:6",
             "Psalm 34:8", "Psalm 37:23-24", "Romans 12:12", "Romans 12:2", "Romans 15:13", "Romans 8:28", "Philippians 4:7"};
+
+    public static String[] getVerseList() {
+        return verseList;
+    }
+
+    public static void setVerseList(String[] verseList) {
+        Verses.verseList = verseList;
+    }
+
+    public static String[] getReferenceList() {
+        return referenceList;
+    }
+
+    public static void setReferenceList(String[] referenceList) {
+        Verses.referenceList = referenceList;
+    }
 }
