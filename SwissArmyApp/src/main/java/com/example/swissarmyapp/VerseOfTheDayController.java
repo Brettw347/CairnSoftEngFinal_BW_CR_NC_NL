@@ -43,6 +43,17 @@ public class VerseOfTheDayController {
             selectVerse();
             //Needs to be commented out since the scene won't load due to the function not working.
             //selectImage();
+            if (SystemData.currentClock() == 0) {
+                DateFormat dateFormat = new SimpleDateFormat("hh.mm aa");
+                dateString = dateFormat.format(new Date()).toString();
+                clock.setText(dateString);
+            }
+            else {
+                DateFormat dateFormat = new SimpleDateFormat("HH.mm");
+                dateString = dateFormat.format(new Date()).toString();
+                clock.setText(dateString);
+            }
+
         }
     }
     /* Selects the verse that is displayed in the Verse of the Day scene, works but will run each time the program

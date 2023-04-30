@@ -13,7 +13,12 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 public class SportsController {
+    @FXML
+    private Label clock;
 
+    public String dateString;
+
+    public Label activityName;
     public void Back(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
@@ -29,6 +34,18 @@ public class SportsController {
 
     @FXML
     private void initialize() throws Exception {
+        if (SystemData.currentClock() == 0) {
+            DateFormat dateFormat = new SimpleDateFormat("hh.mm aa");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
+        else {
+            DateFormat dateFormat = new SimpleDateFormat("HH.mm");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
+
+
         EaglesCSV.generateStats();
         record.setText("2023 Record (" + EaglesCSV.getWins() + "-" + EaglesCSV.getLoss() + "-" + EaglesCSV.getTies() + ")");
     }

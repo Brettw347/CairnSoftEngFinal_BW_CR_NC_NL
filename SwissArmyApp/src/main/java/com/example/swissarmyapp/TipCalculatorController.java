@@ -50,7 +50,7 @@ public class TipCalculatorController {
             clock.setText(dateString);
         }
         else {
-            DateFormat dateFormat = new SimpleDateFormat("hh.mm");
+            DateFormat dateFormat = new SimpleDateFormat("HH.mm");
             dateString = dateFormat.format(new Date()).toString();
             clock.setText(dateString);
         }
