@@ -12,10 +12,22 @@ import javafx.stage.Stage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 import java.io.IOException;
 
+
+
+
+
+=======
 public class VerseOfTheDayController {
+    @FXML
+    private Label clock;
+
+    public String dateString;
     @FXML
     private Label reference;
     @FXML
@@ -50,7 +62,6 @@ public class VerseOfTheDayController {
             reference.setText(Verses.referenceList[verseNum]);
         }
     }
-
     // Used to set the image that displays on the Verse of the Day scene, does not work
     private void selectImage() throws FileNotFoundException {
         Random rand = new Random();

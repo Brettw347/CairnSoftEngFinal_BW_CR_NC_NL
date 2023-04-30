@@ -3,33 +3,40 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
+<?language javascript?>
 
 <AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.ActivityCenterController">
    <children>
-      <Button layoutX="142.0" layoutY="42.0" mnemonicParsing="false" onAction="#ToTipCalculator" prefHeight="49.0" prefWidth="216.0" text="Tip Calculator">
+      <Button fx:id="TIPCALCULATOR" layoutX="142.0" layoutY="95.0" mnemonicParsing="false" onAction="#ToTipCalculator" prefHeight="49.0" prefWidth="216.0" text="Tip Calculator">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button layoutX="142.0" layoutY="104.0" mnemonicParsing="false" onAction="#ToSports" prefHeight="49.0" prefWidth="216.0" text="Sports">
+      <Button layoutX="142.0" layoutY="159.0" mnemonicParsing="false" onAction="#ToSports" prefHeight="49.0" prefWidth="216.0" text="Sports">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button layoutX="142.0" layoutY="167.0" mnemonicParsing="false" onAction="#ToVerseOfTheDay" prefHeight="49.0" prefWidth="216.0" text="Verse of the Day">
+      <Button layoutX="142.0" layoutY="225.0" mnemonicParsing="false" onAction="#ToVerseOfTheDay" prefHeight="49.0" prefWidth="216.0" text="Verse of the Day">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="142.0" layoutY="232.0" mnemonicParsing="false" onAction="#ToTrivia" prefHeight="49.0" prefWidth="216.0" text="Trivia">
+      <Button layoutX="142.0" layoutY="286.0" mnemonicParsing="false" onAction="#ToTrivia" prefHeight="49.0" prefWidth="216.0" text="Trivia">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button layoutX="142.0" layoutY="292.0" mnemonicParsing="false" onAction="#ToSettings" prefHeight="49.0" prefWidth="216.0" text="Settings">
+      <Button layoutX="142.0" layoutY="345.0" mnemonicParsing="false" onAction="#ToSettings" prefHeight="49.0" prefWidth="216.0" text="Settings">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Text layoutX="152.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose an Activity">
+      <Text layoutX="142.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose an Activity" wrappingWidth="216.0">
          <font>
             <Font size="24.0" />
          </font></Text>
+      <Label fx:id="clock" layoutX="54.0" layoutY="432.0" text="Clock" />
+      <Label fx:id="activityName" layoutX="142.0" layoutY="14.0" prefHeight="51.0" prefWidth="216.0" text="Username" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

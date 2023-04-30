@@ -30,5 +30,6 @@
          <font>
             <Font size="10.0" />
          </font></Button>
+      <Label fx:id="clock" layoutX="54.0" layoutY="432.0" text="Clock" />
    </children>
 </AnchorPane>

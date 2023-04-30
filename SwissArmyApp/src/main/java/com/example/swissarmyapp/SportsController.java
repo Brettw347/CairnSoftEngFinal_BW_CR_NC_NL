@@ -9,9 +9,10 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-
-public class SportsController extends EaglesCSV{
     public void Back(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
