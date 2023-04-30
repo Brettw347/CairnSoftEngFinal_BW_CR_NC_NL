@@ -7,11 +7,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.*;
 
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -30,7 +27,8 @@ public class SettingsController {
     @FXML
     private CheckBox dark;
     public String dateString;
-
+    @FXML
+    public ScrollBar fontsize;
 
 
     @FXML
@@ -57,7 +55,7 @@ public class SettingsController {
 
 
         fontChoice.setItems(fontNames);
-        clock.setFont(Font.font(SystemData.getFont(), SystemData.fontSize));
+        clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
 
     }
     @FXML
@@ -87,5 +85,8 @@ public class SettingsController {
         }
     }
     public void ChangedFontSize(){
+        int i =  (int)(fontsize.getValue());
+        SystemData.setFontSize(i);
+        System.out.println(i);
     }
 }

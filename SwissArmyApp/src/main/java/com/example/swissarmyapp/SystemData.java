@@ -10,7 +10,7 @@ public class SystemData{
 
     }
 
-    public static int fontSize = 12;
+    private static int fontSize = 12;
     public static String username = "No Name";
 
     public static String getUsername() {
@@ -21,20 +21,19 @@ public class SystemData{
         SystemData.username = username;
     }
 
-    public int getFontSize() {
-        return fontSize;
-    }
 
-    public void setFontSize(int fontSize) {
-        this.fontSize = fontSize;
+    public static void setFontSize(int f) {
+       fontSize = f;
     }
 
     public static String getFont() {
         return font;
     }
-
-    public void setFont(String font) {
-        this.font = font;
+    public static int getFontSize() {
+        return fontSize;
+    }
+    public static void setFont(String f) {
+       font = f;
     }
 
 
