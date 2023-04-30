@@ -60,6 +60,12 @@ public class SettingsController {
     }
     @FXML
     public void Back(ActionEvent event) throws IOException {
+
+        int i =  (int)(fontsize.getValue());
+        SystemData.setFontSize(i);
+        System.out.println(i);
+
+
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
         scene.getStylesheets().add(HelloApplication.class.getResource(SystemData.currentStyle()).toExternalForm());
@@ -85,8 +91,6 @@ public class SettingsController {
         }
     }
     public void ChangedFontSize(){
-        int i =  (int)(fontsize.getValue());
-        SystemData.setFontSize(i);
-        System.out.println(i);
+
     }
 }
