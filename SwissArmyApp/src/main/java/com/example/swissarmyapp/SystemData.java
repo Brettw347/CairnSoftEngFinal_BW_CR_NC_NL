@@ -11,6 +11,15 @@ public class SystemData{
     }
 
     public static int fontSize = 12;
+    public static String username = "No Name";
+
+    public static String getUsername() {
+        return username;
+    }
+
+    public static void setUsername(String username) {
+        SystemData.username = username;
+    }
 
     public int getFontSize() {
         return fontSize;

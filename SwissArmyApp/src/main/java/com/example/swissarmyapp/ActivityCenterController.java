@@ -20,6 +20,8 @@ public class ActivityCenterController {
 
     public String dateString;
 
+    public Label activityName;
+
     @FXML
     private void initialize(){
         if (SystemData.currentClock() == 0) {
@@ -32,7 +34,7 @@ public class ActivityCenterController {
             dateString = dateFormat.format(new Date()).toString();
             clock.setText(dateString);
         }
-
+        activityName.setText(SystemData.getUsername());
     }
     @FXML
     public void ToTipCalculator(ActionEvent event) throws IOException {
