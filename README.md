@@ -23,7 +23,6 @@ This program is designed to run on a tablet running Windows 11 version 22H2.
 - 'As a customer, I want to be able to change my user name so that if I think of a better one, I can switch it without having to log out and back in.'
 - 'As a Christian, I want to read a daily Bible verse before going into my meeting so that I am uplifed and encouraged by Scripture.
 - 'As a history buff, I want to test my knowledge on history, so that I can see how much I know and can learn things I don't know.'
-- 'As a bored client, I want to read something humorous so that I can be entertained while I wait for my meeting.'
 
 ## UML Diagrams
 ![UML Diagram](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UML%20java%20class%20diagram.jpg)
@@ -38,9 +37,6 @@ This program is designed to run on a tablet running Windows 11 version 22H2.
 ### Tip Calculator
 ![Tip Calculator](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Tip%20Calculator.png)
 
-### Madlibs
-![Madlibs](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Madlibs.png)
-
 ### Sports 
 ![Sports](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Sports.png)
 
@@ -52,3 +48,9 @@ This program is designed to run on a tablet running Windows 11 version 22H2.
 
 ### Settings
 ![Settings](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Settings.png)
+
+### Bugs
+- Verse of the Day scene displays the same image each time it is loaded. 
+- Verse of the Day changes each time the scene is loaded.
+
+### Upcoming Features
