@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+public class SportsController {
 
     public void Back(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
@@ -28,8 +29,8 @@ import java.util.Date;
 
     @FXML
     private void initialize() throws Exception {
-        com.example.swissarmyapp.EaglesCSV.generateStats();
-        record.setText("2023 Record (" + getWins() + "-" + getLoss() + "-" + getTies() + ")");
+        EaglesCSV.generateStats();
+        record.setText("2023 Record (" + EaglesCSV.getWins() + "-" + EaglesCSV.getLoss() + "-" + EaglesCSV.getTies() + ")");
     }
 
 }

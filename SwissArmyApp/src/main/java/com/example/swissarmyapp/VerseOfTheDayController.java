@@ -22,7 +22,6 @@ import java.io.IOException;
 
 
 
-=======
 public class VerseOfTheDayController {
     @FXML
     private Label clock;
