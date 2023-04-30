@@ -10,9 +10,18 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class TriviaController {
+    @FXML
+    private Label clock;
+
+    public String dateString;
+
+
     @FXML
     private Label questionLabel;
 
@@ -39,7 +48,16 @@ public class TriviaController {
 
 //    This initializes the controller
     public void initialize() {
-
+        if (SystemData.currentClock() == 0) {
+            DateFormat dateFormat = new SimpleDateFormat("hh.mm aa");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
+        else {
+            DateFormat dateFormat = new SimpleDateFormat("hh.mm");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
         // This loads questions from TriviaData class
         questions = TriviaData.getQuestions();
 

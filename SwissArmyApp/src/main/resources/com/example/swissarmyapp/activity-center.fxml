@@ -6,13 +6,10 @@
 <?language javascript?>
 
 <AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.ActivityCenterController">
-   <fx:script>
-      var myText = "System";
-   </fx:script>
    <children>
       <Button fx:id="TIPCALCULATOR" layoutX="142.0" layoutY="42.0" mnemonicParsing="false" onAction="#ToTipCalculator" prefHeight="49.0" prefWidth="216.0" text="Tip Calculator">
          <font>
-            <Font name="$myText" size="24.0" />
+            <Font size="24.0" />
          </font></Button>
       <Button layoutX="142.0" layoutY="104.0" mnemonicParsing="false" onAction="#ToSports" prefHeight="49.0" prefWidth="216.0" text="Sports">
          <font>
@@ -35,5 +32,6 @@
          <font>
             <Font size="24.0" />
          </font></Text>
+      <Label fx:id="clock" layoutX="54.0" layoutY="432.0" text="Clock" />
    </children>
 </AnchorPane>

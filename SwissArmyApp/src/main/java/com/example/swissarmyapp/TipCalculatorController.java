@@ -13,7 +13,10 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static java.lang.Double.parseDouble;
 
@@ -30,11 +33,27 @@ public class TipCalculatorController {
 
     @FXML
     private TextField total;
+    @FXML
+    private Label clock;
+
+    public String dateString;
+
+
 
    //Initializes the percentChoice ChoiceBox in the tip calculator
     @FXML
     private void initialize() {
         percentChoice.setItems(percentages);
+        if (SystemData.currentClock() == 0) {
+            DateFormat dateFormat = new SimpleDateFormat("hh.mm aa");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
+        else {
+            DateFormat dateFormat = new SimpleDateFormat("hh.mm");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
     }
 
     //Takes in the users total and chosen tip percentage and outputs how much the tip will cost

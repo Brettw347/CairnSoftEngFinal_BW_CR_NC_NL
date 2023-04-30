@@ -25,5 +25,6 @@
             <Font size="24.0" />
          </font>
       </Label>
+      <Label fx:id="clock" layoutX="54.0" layoutY="432.0" text="Clock" />
    </children>
 </AnchorPane>

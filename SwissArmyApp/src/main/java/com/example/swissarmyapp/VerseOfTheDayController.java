@@ -13,11 +13,19 @@ import javafx.stage.Stage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 import java.io.IOException;
 
 
 public class VerseOfTheDayController {
+    @FXML
+    private Label clock;
+
+    public String dateString;
+
 
     @FXML
     private Label reference;
@@ -34,7 +42,16 @@ public class VerseOfTheDayController {
         verse.setText(Verses.verseList[randInt1]);
         reference.setText(Verses.referenceList[randInt1]);
 
-
+        if (SystemData.currentClock() == 0) {
+            DateFormat dateFormat = new SimpleDateFormat("hh.mm aa");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
+        else {
+            DateFormat dateFormat = new SimpleDateFormat("hh.mm");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
     }
 
     //Returns the user to the Activity Center page
