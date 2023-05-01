@@ -16,7 +16,7 @@ The purpose of this app is to occupy clients of Higlanders Industries while they
 4. Enter a username and then click 'Go!' to get started.
 
 ## System Requirements
-This program is designed to run on a tablet running Windows 11 version 22H2.
+This program is designed to run on a tablet running Windows 11 version 22H2. Requires a Java Runtime Environment.
 
 ## User Stories
 - 'As the Highlanders Industries CEO, I want an application to occupy my clients so that they are not bored while waiting for their meetings.
