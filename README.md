@@ -58,11 +58,12 @@ This program is designed to run on a tablet running Windows 11 version 22H2.
 - Verse of the Day changes each time the scene is loaded.
 - Username can overflow.
 - Darkmode and Nostalgia Mode truncates some text.
-- Tip Calculator throws error if non-number values are input.
-- CSV Pie Chart for Sport Statistics doesn't show up.
+- Tip Calculator throws error if incorrect values are input.
+- Pie chart on Sports page is a png made on an external website as the JavaFX pie chart wouldn't work.
 
 
 ### Upcoming Features
 - More questions for Trivia Section, including different catagories.
 - A rewarding point system based on time use, triva questions answered, tips calculated, and verses read.
 - Sound
+- Season archive for past years on sports page
