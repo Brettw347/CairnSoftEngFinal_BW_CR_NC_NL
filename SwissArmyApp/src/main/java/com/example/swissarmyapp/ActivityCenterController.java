@@ -5,11 +5,40 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ActivityCenterController {
+
+    @FXML
+    private Label clock;
+
+    public String dateString;
+
+    public Label activityName;
+
+    @FXML
+    private void initialize(){
+        if (SystemData.currentClock() == 0) {
+            DateFormat dateFormat = new SimpleDateFormat("hh.mm aa");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
+        else {
+            DateFormat dateFormat = new SimpleDateFormat("HH.mm");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
+        activityName.setText(SystemData.getUsername());
+        clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
+
+    }
     @FXML
     public void ToTipCalculator(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("tip-calculator.fxml"));

@@ -13,8 +13,14 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+public class SportsController {
+    @FXML
+    private Label clock;
 
-public class SportsController extends EaglesCSV{
+
+    public String dateString;
+
+    public Label activityName;
     public void Back(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 500, 500);
@@ -46,10 +52,15 @@ public class SportsController extends EaglesCSV{
 
         clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
 
+
         com.example.swissarmyapp.EaglesCSV.generateStats();
         record.setText("2023 Record (" + getWins() + "-" + getLoss() + "-" + getTies() + ")");
         quickStats.setText("Stat Summary: \n"+"Total yards gained: "+getTotYards()+"\n"+"Passing yards: "+
                 getPassYards()+"\n"+"Rushing yards: "+getRushYards()+"\n"+"Caused turnovers: "+getTO());
+
+        EaglesCSV.generateStats();
+        record.setText("2023 Record (" + EaglesCSV.getWins() + "-" + EaglesCSV.getLoss() + "-" + EaglesCSV.getTies() + ")");
+
     }
 
 }

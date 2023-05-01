@@ -1,0 +1,13 @@
+.root{
+    -fx-font-size: 15pt;
+    -fx-font-family: "Sophia";
+    -fx-base: #d6b251;
+    -fx-background: #7d672d;
+}
+.button1{
+    -fx-text-fill: #006464;
+    -fx-background-color: #DFB951;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 5;
+}

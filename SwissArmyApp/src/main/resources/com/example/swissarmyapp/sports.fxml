@@ -32,6 +32,7 @@
          <font>
             <Font size="10.0" />
          </font></Button>
+
       <ImageView fitHeight="182.0" fitWidth="248.0" layoutX="14.0" layoutY="277.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../EaglesPieChart.png" />
@@ -49,5 +50,6 @@
             <Font name="System Bold" size="15.0" />
          </font></Label>
       <Label fx:id="clock" layoutX="39.0" layoutY="127.0" text="clock" />
+
    </children>
 </AnchorPane>

@@ -18,7 +18,7 @@
       </Label>
       <VBox alignment="BOTTOM_CENTER" layoutX="90.0" layoutY="137.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="226.0" prefWidth="320.0">
          <children>
-            <Label prefHeight="121.0" prefWidth="246.0" text="Enter the amount you need to calculate for below" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="namewelcome" prefHeight="121.0" prefWidth="246.0" text="Enter the amount you need to calculate for below" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="18.0" />
                </font>
@@ -37,5 +37,6 @@
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
+      <Label fx:id="clock" layoutX="54.0" layoutY="432.0" text="Clock" />
    </children>
 </AnchorPane>

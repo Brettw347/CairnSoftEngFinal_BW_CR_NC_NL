@@ -23,32 +23,42 @@ This program is designed to run on a tablet running Windows 11 version 22H2.
 - 'As a customer, I want to be able to change my user name so that if I think of a better one, I can switch it without having to log out and back in.'
 - 'As a Christian, I want to read a daily Bible verse before going into my meeting so that I am uplifed and encouraged by Scripture.
 - 'As a history buff, I want to test my knowledge on history, so that I can see how much I know and can learn things I don't know.'
-- 'As a bored client, I want to read something humorous so that I can be entertained while I wait for my meeting.'
 
 ## UML Diagrams
 ![UML Diagram](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UML%20java%20class%20diagram.jpg)
 
 ## UI Mockup
 ### Landing Page
-![Landing Page](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Landing%20Page.png)
+![FrontPage](https://user-images.githubusercontent.com/112523378/235389927-8862b2a4-d9d0-4c1d-890f-a62a5acbf0fd.png)
 
 ### Choose Acitivty Page
-![Choose Activity](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Choose%20Activity.png)
+![ActivityPage](https://user-images.githubusercontent.com/112523378/235389946-6a5d8b3d-a67f-457a-8f6e-c6955bfc2fbf.png)
 
 ### Tip Calculator
-![Tip Calculator](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Tip%20Calculator.png)
-
-### Madlibs
-![Madlibs](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Madlibs.png)
+![TipCal](https://user-images.githubusercontent.com/112523378/235389902-e4db9106-f17d-4e46-8b6a-1354ed453c4f.png)
 
 ### Sports 
-![Sports](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Sports.png)
+![Sports](https://user-images.githubusercontent.com/112523378/235389868-67182094-3e32-4c64-b156-eebcbacf9763.png)
 
 ### Verse of the Day
-![VofD](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Verse%20of%20the%20Day.png)
+![VerseOfTheDay](https://user-images.githubusercontent.com/112523378/235389887-4970f1ca-05f3-4f81-8def-91525405ef4b.png)
 
 ### Trivia Game
-![Trivia](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Trivia.png)
+![Trivia](https://user-images.githubusercontent.com/112523378/235389852-cc74e850-a5c2-452a-9114-f0d9f2a54ad2.png)
 
 ### Settings
-![Settings](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/Settings.png)
+![Settings](https://user-images.githubusercontent.com/112523378/235390046-d74c9ef6-6bd2-470e-bf1f-4214f3b2f98f.png)
+
+### Bugs
+- Verse of the Day scene displays the same image each time it is loaded. 
+- Verse of the Day changes each time the scene is loaded.
+- Username can overflow.
+- Darkmode and Nostalgia Mode truncates some text.
+- Tip Calculator throws error if incorrect values are input.
+- CSV Pie Chart for Sport Statistics doesn't show up.
+
+
+### Upcoming Features
+- More questions for Trivia Section, including different catagories.
+- A rewarding point system based on time use, triva questions answered, tips calculated, and verses read.
+- Sound

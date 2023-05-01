@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.swissarmyapp.SettingsController">
@@ -13,28 +12,25 @@
          </font></Button>
       <VBox layoutX="150.0" layoutY="42.0" prefHeight="407.0" prefWidth="201.0">
          <children>
-            <CheckBox mnemonicParsing="false" onAction="#DarkMode" prefHeight="66.0" prefWidth="157.0" text="Dark Mode" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Font Size" wrappingWidth="148.13671875" />
-            <ScrollBar fx:id="FontSize" blendMode="MULTIPLY" max="25.0" nodeOrientation="LEFT_TO_RIGHT" onDragDone="#ChangedFontSize" prefHeight="14.0" prefWidth="219.0" value="12.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="29.0" stroke="WHITE" strokeType="INSIDE" width="200.0" />
-            <HBox prefHeight="100.0" prefWidth="217.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Font" wrappingWidth="54.13671875" />
-                  <ChoiceBox fx:id="fontChoice" prefHeight="25.0" prefWidth="77.0" />
-               </children>
-            </HBox>
+            <CheckBox fx:id="dark" mnemonicParsing="false" onAction="#DarkMode" prefHeight="66.0" prefWidth="157.0" text="Dark Mode" />
+            <CheckBox fx:id="old" mnemonicParsing="false" onAction="#NostalgiaMode" text="Nostalgia Mode " />
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Button layoutX="46.0" layoutY="85.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="110.0" text="Change" />
-                  <Text layoutX="36.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Username">
+                  <Button layoutX="46.0" layoutY="85.0" mnemonicParsing="false" onAction="#ChangeUserName" prefHeight="21.0" prefWidth="110.0" text="Change" />
+                  <Text fx:id="changeusername" layoutX="36.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Username">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="26.0" layoutY="54.0" />
+                  <TextField fx:id="newusername" layoutX="26.0" layoutY="54.0" />
+                  <CheckBox fx:id="twentyfour" layoutX="28.0" layoutY="173.0" mnemonicParsing="false" onAction="#TwentyFour" prefHeight="17.0" prefWidth="167.0" text="24 Hour Format" />
+                  <Button layoutX="46.0" layoutY="123.0" mnemonicParsing="false" onAction="#RandomUserName" prefHeight="21.0" prefWidth="110.0" text="Random Name" />
                </children>
             </AnchorPane>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Clock Size" wrappingWidth="148.13671875" />
+            <ScrollBar fx:id="fontsize" blendMode="MULTIPLY" max="23.0" min="7.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="14.0" prefWidth="219.0" value="12.0" />
          </children>
       </VBox>
+      <Label fx:id="clock" layoutX="54.0" layoutY="432.0" text="Clock" />
    </children>
 </AnchorPane>

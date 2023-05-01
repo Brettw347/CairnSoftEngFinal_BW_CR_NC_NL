@@ -19,17 +19,18 @@
                </font></Label>
             <ImageView fx:id="image" fitHeight="178.0" fitWidth="289.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../VotD%20Images/img1.jpg" />
+                  <Image url="@../../../VotDImages/img1.jpg" />
                </image></ImageView>
          </children></VBox>
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Back" prefHeight="62.0" prefWidth="62.0" text="Return to Activites Page" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="10.0" />
          </font></Button>
-      <Label layoutX="110.0" layoutY="45.0" text="Verse of the Day" textAlignment="CENTER">
+      <Label fx:id="nameverseofday" layoutX="110.0" layoutY="30.0" text="Verse of the Day" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="36.0" />
          </font>
       </Label>
+      <Label fx:id="clock" layoutX="54.0" layoutY="432.0" text="Clock" />
    </children>
 </AnchorPane>
