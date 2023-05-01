@@ -7,8 +7,15 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
 import java.io.IOException;
+import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
+import javafx.scene.chart.PieChart.Data;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 
 public class SportsController extends EaglesCSV{
@@ -26,9 +33,14 @@ public class SportsController extends EaglesCSV{
     private Label record;
 
     @FXML
+    private Label quickStats;
+
+    @FXML
     private void initialize() throws Exception {
         com.example.swissarmyapp.EaglesCSV.generateStats();
         record.setText("2023 Record (" + getWins() + "-" + getLoss() + "-" + getTies() + ")");
+        quickStats.setText("Stat Summary: \n"+"Total yards gained: "+getTotYards()+"\n"+"Passing yards: "+
+                getPassYards()+"\n"+"Rushing yards: "+getRushYards()+"\n"+"Caused turnovers: "+getTO());
     }
 
 }
