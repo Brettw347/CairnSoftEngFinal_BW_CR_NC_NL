@@ -8,14 +8,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 public class SportsController {
     @FXML
     private Label clock;
+
 
     public String dateString;
 
@@ -34,6 +35,9 @@ public class SportsController {
     private Label record;
 
     @FXML
+    private Label quickStats;
+
+    @FXML
     private void initialize() throws Exception {
         if (SystemData.currentClock() == 0) {
             DateFormat dateFormat = new SimpleDateFormat("hh.mm aa");
@@ -48,8 +52,15 @@ public class SportsController {
 
         clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
 
+
+        com.example.swissarmyapp.EaglesCSV.generateStats();
+        record.setText("2023 Record (" + getWins() + "-" + getLoss() + "-" + getTies() + ")");
+        quickStats.setText("Stat Summary: \n"+"Total yards gained: "+getTotYards()+"\n"+"Passing yards: "+
+                getPassYards()+"\n"+"Rushing yards: "+getRushYards()+"\n"+"Caused turnovers: "+getTO());
+
         EaglesCSV.generateStats();
         record.setText("2023 Record (" + EaglesCSV.getWins() + "-" + EaglesCSV.getLoss() + "-" + EaglesCSV.getTies() + ")");
+
     }
 
 }
