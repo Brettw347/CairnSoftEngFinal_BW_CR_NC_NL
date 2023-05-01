@@ -10,6 +10,9 @@
 The purpose of this app is to occupy clients of Higlanders Industries while they wait for their consulting meetings at the company's headquarters.
 
 ## Installation & Usage
+1. Download the ZIP file containing the project.
+2. Double click on 'SwissArmyApp.exe. to run the program.
+3. Enter a username and then select the activity you want.
 
 ## System Requirements
 This program is designed to run on a tablet running Windows 11 version 22H2.
