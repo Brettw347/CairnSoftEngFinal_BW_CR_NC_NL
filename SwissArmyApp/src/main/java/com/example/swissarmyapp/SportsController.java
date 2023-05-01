@@ -6,8 +6,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class SportsController extends EaglesCSV{
@@ -29,6 +33,19 @@ public class SportsController extends EaglesCSV{
 
     @FXML
     private void initialize() throws Exception {
+        if (SystemData.currentClock() == 0) {
+            DateFormat dateFormat = new SimpleDateFormat("hh.mm aa");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
+        else {
+            DateFormat dateFormat = new SimpleDateFormat("HH.mm");
+            dateString = dateFormat.format(new Date()).toString();
+            clock.setText(dateString);
+        }
+
+        clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
+
         com.example.swissarmyapp.EaglesCSV.generateStats();
         record.setText("2023 Record (" + getWins() + "-" + getLoss() + "-" + getTies() + ")");
         quickStats.setText("Stat Summary: \n"+"Total yards gained: "+getTotYards()+"\n"+"Passing yards: "+
