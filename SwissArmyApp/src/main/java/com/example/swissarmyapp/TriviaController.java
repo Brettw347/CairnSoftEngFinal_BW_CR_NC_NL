@@ -85,10 +85,10 @@ public class TriviaController {
         if ((clickedButton == button1 || clickedButton == button2 || clickedButton == button3 || clickedButton == button4)
                 && clickedButton.getText().equals(currentQuestion.getAnswer())) {
 //          If the answer is correct, display "CORRECT!!!"
-            answerLabel.setText("CORRECT!!!");
+            answerLabel.setText(SystemData.getUsername() + " Your CORRECT!!!");
         } else {
 //          If the answer is incorrect, display "Wrong Guess Again"
-            answerLabel.setText("Wrong Guess Again");
+            answerLabel.setText(SystemData.getUsername() + " Your Wrong.\n Guess Again");
         }
     }
     public void nextQuestion(ActionEvent event) {

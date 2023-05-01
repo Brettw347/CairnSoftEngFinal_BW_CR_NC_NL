@@ -13,27 +13,152 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 public class SettingsController {
-    @FXML
-    private ChoiceBox fontChoice;
     @FXML
     private Label clock;
     @FXML
     private CheckBox twentyfour;
     @FXML
     private CheckBox dark;
+    @FXML
+    private CheckBox old;
     public String dateString;
     @FXML
     public ScrollBar fontsize;
 
     @FXML
     private TextField newusername;
-    @FXML
-    ObservableList<String> fontNames = FXCollections.observableArrayList("Times New Roman", "Arial", "Comic Sans");
+    String[] nameList = {"Nate",
+            "Gelar Adams",
+            "Elsea Anderson",
+            "Juliann Brown",
+            "Alle Shaw" ,
+            "Jomarie Adams",
+            "Jondy Mitchell",
+            "Ciji Murphy" ,
+            "Adde Jones" ,
+            "Jomarie James" ,
+            "Joylyn Adams" ,
+            "Julij Evans" ,
+            "Isla Rogers" ,
+            "Auton Thomas" ,
+            "Himar Mason" ,
+            "Grace Price" ,
+            "Juliano Davies" ,
+            "Jomarie Mitchell" ,
+            "Avgoustinos Miller" ,
+            "Jonathen Nguyen" ,
+            "Daryllyn James" ,
+            "Laniyah Wood" ,
+            "Aimo Carter" ,
+            "Charlotte Wood" ,
+            "Harwill Marshall" ,
+            "Bassett Edwards" ,
+            "Jinelle Ward" ,
+            "Ava Chapman" ,
+            "Charlotte Robertson" ,
+            "Juin Richardson" ,
+            "Jinadath Webb" ,
+            "Joyelle Harris" ,
+            "Daryllyn Marshall" ,
+            "Jomarie Green" ,
+            "Juan Elliott" ,
+            "Allirea Baker" ,
+            "Harper Clarke" ,
+            "Bassett Clark" ,
+            "Aayla Matthews" ,
+            "Julietta Phillips" ,
+            "Hastie Clarke" ,
+            "Celyse Matthews",
+            "Alyne Johnson" ,
+            "Halena Matthews",
+            "Jimmie Cooper" ,
+            "Alisah Clarke" ,
+            "Brak Hughes" ,
+            "Harwell Pearce",
+            "Jondi Simpson" ,
+            "Cra Hughes" ,
+            "Jimm Campbell",
+            "Jono Jackson" ,
+            "Alle Kennedy" ,
+            "Gon Collins" ,
+            "Gelar Kumar" ,
+            "Harper Thompson",
+            "Bastiaan Davies" ,
+            "Luu Johnson" ,
+            "Himyar Adams" ,
+            "Bayram Morris" ,
+            "Cra James" ,
+            "Hastie Tran",
+            "Halena Wright" ,
+            "Julietta Thomas" ,
+            "Dainen Mills" ,
+            "Dainen Jones" ,
+            "Harwill Moore" ,
+            "Joyelle Richardson",
+            "Harwill Fisher" ,
+            "Lucas King" ,
+            "Julietta Graham",
+            "Ghy Ross" ,
+            "Halena Bailey",
+            "Gie Robertson" ,
+            "Adde Wright" ,
+            "Himar Walsh" ,
+            "Juliann Matthews" ,
+            "Ethan Taylor" ,
+            "Ciji Blackman" ,
+            "Harwill Corbyn" ,
+            "Gon Shaw" ,
+            "Jula Kelly",
+            "Denaye Hamilton" ,
+            "Jimme Campbell" ,
+            "Centaine James" ,
+            "Jonila Thomas" ,
+            "Alisah Fisher" ,
+            "Ilina White" ,
+            "Juin Evans" ,
+            "Aayla Ward" ,
+            "Halena Collins",
+            "Laniyah Murray" ,
+            "Daymion Parker" ,
+            "Himyar Cox" ,
+            "Daynan Harvey",
+            "Cra Morris" ,
+            "Danian Kelly",
+            "Julieth McDonald",
+            "Daynan Johnson" ,
+            "Adami Matthews",
+            "Nico Cione",
+            "Caleb Rudloff",
+            "Brett Williams",
+            "Mergie Castro " ,
+            "Nico Cione the Legend" ,
+            "Caroline Conrad" ,
+            "Samuel Douglass " ,
+            "Christopher Eelman" ,
+            "Rachel Ferrence " ,
+            "Jack Fiacco" ,
+            "Yunn Kang" ,
+            "Mark Kim Karomo" ,
+            "Elizaveta Kim" ,
+            "Artur Kondratyuk" ,
+            "Nathaniel Lofgren" ,
+            "Dave Ng'ang'a" ,
+            "Laina Nguyen" ,
+            "Brandon Petcaugh" ,
+            "Nancy Rivera" ,
+            "Cool Caleb " ,
+            "Garrett Seidel " ,
+            "Brett 'the boss' Williams" ,
+            "Dawei Zhao"
+
+    };
     @FXML
     private void initialize() {
         if (SystemData.currentClock() == 0) {
@@ -50,13 +175,15 @@ public class SettingsController {
         if (SystemData.currentClock() != 0) {
             twentyfour.setSelected(true);
         }
-        if (SystemData.currentStyle() != "/originalstyle.css") {
+        if (SystemData.currentStyle() == "/darkmode.css") {
             dark.setSelected(true);
+        }
+        if (SystemData.currentStyle() == "/oldstyle.css") {
+            old.setSelected(true);
         }
         double d = SystemData.getFontSize();
         fontsize.setValue(d);
 
-        fontChoice.setItems(fontNames);
         clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
 
     }
@@ -65,7 +192,6 @@ public class SettingsController {
 
         int i =  (int)(fontsize.getValue());
         SystemData.setFontSize(i);
-        System.out.println(i);
 
 
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("activity-center.fxml"));
@@ -77,8 +203,16 @@ public class SettingsController {
         stage.show();
     }
     public void DarkMode(){
-        if (SystemData.currentStyle() == "/originalstyle.css") {
+        if (SystemData.currentStyle() != "/darkmode.css") {
             SystemData.setDarkMode("/darkmode.css");
+        }
+        else {
+            SystemData.setDarkMode("/originalstyle.css");
+        }
+    }
+    public void NostalgiaMode(){
+        if (SystemData.currentStyle() != "/oldstyle.css") {
+            SystemData.setDarkMode("/oldstyle.css");
         }
         else {
             SystemData.setDarkMode("/originalstyle.css");
@@ -97,5 +231,11 @@ public class SettingsController {
     public void ChangeUserName() {
         SystemData.setUsername(newusername.getText());
     }
-
+    @FXML
+    public void RandomUserName(){
+        Random rand = new Random();
+        int randInt1 = rand.nextInt(122);
+        SystemData.setUsername(nameList[randInt1]);
+        newusername.setText(nameList[randInt1]);
+    }
 }

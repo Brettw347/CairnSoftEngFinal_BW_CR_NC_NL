@@ -36,11 +36,10 @@ public class TipCalculatorController {
     private TextField total;
     @FXML
     private Label clock;
-
     public String dateString;
 
-
-
+    @FXML
+    private Label namewelcome;
    //Initializes the percentChoice ChoiceBox in the tip calculator
     @FXML
     private void initialize() {
@@ -55,6 +54,7 @@ public class TipCalculatorController {
             dateString = dateFormat.format(new Date()).toString();
             clock.setText(dateString);
         }
+        namewelcome.setText(SystemData.getUsername() + " please enter the amount you need to calculate for below");
         clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
 
     }
