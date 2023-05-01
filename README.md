@@ -42,7 +42,7 @@ This program is designed to run on a tablet running Windows 11 version 22H2.
 ![TipCal](https://user-images.githubusercontent.com/112523378/235389902-e4db9106-f17d-4e46-8b6a-1354ed453c4f.png)
 
 ### Sports 
-![Sports](https://user-images.githubusercontent.com/112523378/235389868-67182094-3e32-4c64-b156-eebcbacf9763.png)
+![Sports](https://github.com/Brettw347/CairnSoftEngFinal_BW_CR_NC_NL/blob/main/UI%20Mockups/SportsUpdated.png)
 
 ### Verse of the Day
 ![VerseOfTheDay](https://user-images.githubusercontent.com/112523378/235389887-4970f1ca-05f3-4f81-8def-91525405ef4b.png)
