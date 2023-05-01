@@ -13,6 +13,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static com.example.swissarmyapp.EaglesCSV.*;
+
 public class SportsController {
     @FXML
     private Label clock;
@@ -59,7 +61,7 @@ public class SportsController {
                 getPassYards()+"\n"+"Rushing yards: "+getRushYards()+"\n"+"Caused turnovers: "+getTO());
 
         EaglesCSV.generateStats();
-        record.setText("2023 Record (" + EaglesCSV.getWins() + "-" + EaglesCSV.getLoss() + "-" + EaglesCSV.getTies() + ")");
+        record.setText("2023 Record (" + getWins() + "-" + getLoss() + "-" + getTies() + ")");
 
     }
 
