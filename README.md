@@ -52,5 +52,8 @@ This program is designed to run on a tablet running Windows 11 version 22H2.
 ### Bugs
 - Verse of the Day scene displays the same image each time it is loaded. 
 - Verse of the Day changes each time the scene is loaded.
+- Username can overflow.
+- Darkmode and Nostalgia Mode truncates some text.
+- Tip Calculator throws error if incorrect values are input.
 
 ### Upcoming Features
