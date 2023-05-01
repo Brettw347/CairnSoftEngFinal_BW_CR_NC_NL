@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -58,6 +59,8 @@ public class TriviaController {
             dateString = dateFormat.format(new Date()).toString();
             clock.setText(dateString);
         }
+        clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
+
         // This loads questions from TriviaData class
         questions = TriviaData.getQuestions();
 
@@ -82,10 +85,10 @@ public class TriviaController {
         if ((clickedButton == button1 || clickedButton == button2 || clickedButton == button3 || clickedButton == button4)
                 && clickedButton.getText().equals(currentQuestion.getAnswer())) {
 //          If the answer is correct, display "CORRECT!!!"
-            answerLabel.setText("CORRECT!!!");
+            answerLabel.setText(SystemData.getUsername() + " Your CORRECT!!!");
         } else {
 //          If the answer is incorrect, display "Wrong Guess Again"
-            answerLabel.setText("Wrong Guess Again");
+            answerLabel.setText(SystemData.getUsername() + " Your Wrong.\n Guess Again");
         }
     }
     public void nextQuestion(ActionEvent event) {

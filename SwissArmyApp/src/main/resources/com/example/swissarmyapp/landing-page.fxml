@@ -11,7 +11,7 @@
          <font>
             <Font name="Copperplate Gothic Light" size="43.0" />
          </font></Button>
-      <TextField fx:id="username" layoutX="159.0" layoutY="298.0" prefHeight="25.0" prefWidth="182.0" text="Please Input Your Username!" />
+      <TextField fx:id="username" layoutX="159.0" layoutY="298.0" prefHeight="25.0" prefWidth="182.0" text="Username" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="169.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
                <Image url="@../../../HighlanderLogo.png" />

@@ -1,7 +1,12 @@
 .button {
-   -fx-background-color: #000000;
-   -fx-text-fill: white;
+   -fx-background-color: white;
+   -fx-text-fill: black;
    -fx-border-width: 2px;
-   -fx-border-color: white;
+   -fx-border-color: gray;
 
+}
+.root{
+    -fx-font-family: "Roberto";
+    -fx-base: #7d7d7d;
+    -fx-background: #000000;
 }

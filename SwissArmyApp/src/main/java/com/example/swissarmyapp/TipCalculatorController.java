@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -35,11 +36,10 @@ public class TipCalculatorController {
     private TextField total;
     @FXML
     private Label clock;
-
     public String dateString;
 
-
-
+    @FXML
+    private Label namewelcome;
    //Initializes the percentChoice ChoiceBox in the tip calculator
     @FXML
     private void initialize() {
@@ -54,6 +54,9 @@ public class TipCalculatorController {
             dateString = dateFormat.format(new Date()).toString();
             clock.setText(dateString);
         }
+        namewelcome.setText(SystemData.getUsername() + " please enter the amount you need to calculate for below");
+        clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
+
     }
 
     //Takes in the users total and chosen tip percentage and outputs how much the tip will cost

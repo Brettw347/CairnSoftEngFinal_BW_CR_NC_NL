@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -32,6 +33,8 @@ public class VerseOfTheDayController {
     @FXML
     private Label verse;
     @FXML
+    private Label nameverseofday;
+    @FXML
    private ImageView image;
 
     // Used to indicate if the verse has been chosen, if the value is true, selectVerse() is not supposed to run
@@ -53,7 +56,8 @@ public class VerseOfTheDayController {
                 dateString = dateFormat.format(new Date()).toString();
                 clock.setText(dateString);
             }
-
+            clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
+            nameverseofday.setText(SystemData.getUsername() + "'s \nVerse of the Day");
         }
     }
     /* Selects the verse that is displayed in the Verse of the Day scene, works but will run each time the program

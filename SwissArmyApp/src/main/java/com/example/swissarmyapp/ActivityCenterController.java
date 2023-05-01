@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -35,6 +36,7 @@ public class ActivityCenterController {
             clock.setText(dateString);
         }
         activityName.setText(SystemData.getUsername());
+        clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
 
     }
     @FXML
