@@ -7,6 +7,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -58,6 +59,8 @@ public class TriviaController {
             dateString = dateFormat.format(new Date()).toString();
             clock.setText(dateString);
         }
+        clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
+
         // This loads questions from TriviaData class
         questions = TriviaData.getQuestions();
 

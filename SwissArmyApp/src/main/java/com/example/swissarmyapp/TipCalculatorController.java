@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -54,6 +55,8 @@ public class TipCalculatorController {
             dateString = dateFormat.format(new Date()).toString();
             clock.setText(dateString);
         }
+        clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
+
     }
 
     //Takes in the users total and chosen tip percentage and outputs how much the tip will cost

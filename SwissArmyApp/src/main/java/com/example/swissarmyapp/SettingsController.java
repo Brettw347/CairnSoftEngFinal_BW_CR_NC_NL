@@ -30,7 +30,8 @@ public class SettingsController {
     @FXML
     public ScrollBar fontsize;
 
-
+    @FXML
+    private TextField newusername;
     @FXML
     ObservableList<String> fontNames = FXCollections.observableArrayList("Times New Roman", "Arial", "Comic Sans");
     @FXML
@@ -52,7 +53,8 @@ public class SettingsController {
         if (SystemData.currentStyle() != "/originalstyle.css") {
             dark.setSelected(true);
         }
-
+        double d = SystemData.getFontSize();
+        fontsize.setValue(d);
 
         fontChoice.setItems(fontNames);
         clock.setFont(Font.font(SystemData.getFont(), SystemData.getFontSize()));
@@ -75,7 +77,7 @@ public class SettingsController {
         stage.show();
     }
     public void DarkMode(){
-        if (SystemData.currentStyle() != "/originalstyle.css") {
+        if (SystemData.currentStyle() == "/originalstyle.css") {
             SystemData.setDarkMode("/darkmode.css");
         }
         else {
@@ -90,7 +92,10 @@ public class SettingsController {
             SystemData.setTwentyFour(0);
         }
     }
-    public void ChangedFontSize(){
 
+    @FXML
+    public void ChangeUserName() {
+        SystemData.setUsername(newusername.getText());
     }
+
 }
