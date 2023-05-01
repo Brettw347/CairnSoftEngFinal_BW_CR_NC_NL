@@ -60,6 +60,7 @@ This program is designed to run on a tablet running Windows 11 version 22H2.
 - Darkmode and Nostalgia Mode truncates some text.
 - Tip Calculator throws error if incorrect values are input.
 - Pie chart on Sports page is a png made on an external website as the JavaFX pie chart wouldn't work.
+- 'SwissArmyApp.exe' doesn't work.
 
 
 ### Upcoming Features
