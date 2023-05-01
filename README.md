@@ -58,7 +58,7 @@ This program is designed to run on a tablet running Windows 11 version 22H2.
 - Verse of the Day changes each time the scene is loaded.
 - Username can overflow.
 - Darkmode and Nostalgia Mode truncates some text.
-- Tip Calculator throws error if incorrect values are input.
+- Tip Calculator throws error if non-number values are input.
 - CSV Pie Chart for Sport Statistics doesn't show up.
 
 
